@@ -1,7 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const DEFAULT_OUTPUT_DIR = "/output";
+const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? DEFAULT_OUTPUT_DIR;
 const OUTPUT_NAME = "entry.txt";
 const OUTPUT_FILE = join(OUTPUT_DIR, OUTPUT_NAME);
 const PLAN_TEXT =
